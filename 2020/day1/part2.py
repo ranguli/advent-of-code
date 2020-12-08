@@ -1,6 +1,6 @@
 target = 2020
 
-with open("day1.txt") as f:
+with open("input.txt") as f:
     expenses = list(filter(None, f.read().split("\n")))
 
     for index, expense in enumerate(expenses):

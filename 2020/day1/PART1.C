@@ -28,7 +28,7 @@ int countlines(char filename[]) {
 main() {
     FILE *in_file;
     char line[100];
-    char filename[] = "day1_1.txt";
+    char filename[] = "input.txt";
     int file_size;
     int i, j;
     unsigned int product;
