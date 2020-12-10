@@ -2,10 +2,6 @@ import math
 
 valid = 0
 
-
-line = "FBFBBFFRLR"
-
-
 def process_row(line):
     min_range = 0
     max_range = 127
