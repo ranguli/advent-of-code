@@ -2,7 +2,6 @@
 #include <cmath> 
 #include <fstream>
 #include <iostream>
-#include <numeric>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -26,14 +25,23 @@ int main() {
     std::sort(leftNumbers.begin(), leftNumbers.end());
     std::sort(rightNumbers.begin(), rightNumbers.end());
     
-    int result;
+    int part1 = 0;
 
-    // I could have replaced this with unreadable functional
-    // slop for style points, but I didn't.
     for (size_t i = 0; i < leftNumbers.size(); ++i) {
-        result += std::abs(leftNumbers[i] - rightNumbers[i]);
+        part1 += std::abs(leftNumbers[i] - rightNumbers[i]);
     }
 
-    std::cout << "Result: " << result << "\n";
+    std::cout << "Part 1 result: " << part1 << "\n";
+
+    int part2 = 0;
+
+    for (size_t i = 0; i < leftNumbers.size(); ++i) {
+        int count = std::count(rightNumbers.begin(), rightNumbers.end(), leftNumbers[i]);
+        part2 += leftNumbers[i] * count;
+
+    }
+    
+    std::cout << "Part 2 result: " << part2 << "\n";
+
     return 0;
 }
