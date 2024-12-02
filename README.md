@@ -1,2 +1,3 @@
-# adventofcode
-Solutions to advent of code + first time using Golang
+# advent-of-code
+
+Solutions to Advent of Code challenges.
